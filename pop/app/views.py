@@ -5,10 +5,13 @@ import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import io
+import os
 
+submit = "submit2.pkl"
+submit_path = os.path.join(os.path.abspath(os.path.dirname(__file__)), submit)
 # Create your views here.
 
-df = pd.read_pickle("submit2.pkl")
+df = pd.read_pickle(submit_path)
 
 def show(pref=None):
     fig, ax = plt.subplots(figsize=(10, 8))
